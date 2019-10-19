@@ -1,0 +1,5 @@
+src/common/config/constants.js
+
+node_modules/**
+icons/**
+package-lock.json
