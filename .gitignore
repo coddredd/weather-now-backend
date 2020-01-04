@@ -1,4 +1,4 @@
-src/common/config/constants.js
+src/common/config
 
 node_modules/**
 icons/**

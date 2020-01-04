@@ -25,12 +25,15 @@ class WebMessage extends Message {
         return {
             location: this.location,
             currentTemp: this.currentTemp,
-            feelsLike: this.feelsLike
+            feelsLike: this.feelsLike,
+            weatherDesc: this.weatherDesc
         }
     }
 
     get weatherDate() {
         return {
+            currentTemp: this.currentTemp,
+            feelsLike: this.feelsLike,
             location: this.location,
             mintempC: this.mintempC,
             maxtempC: this.maxtempC,
