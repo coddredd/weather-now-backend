@@ -1,5 +1,5 @@
-const { runChat } = require('./chat/chat');
+const { runBot } = require('./chat/chat');
 const { runServer } = require('./server/server');
 
-runChat();
+runBot();
 runServer();

@@ -1,5 +1,3 @@
-src/common/config
-
-node_modules/**
-icons/**
+.DS_Store
+node_modules/
 package-lock.json

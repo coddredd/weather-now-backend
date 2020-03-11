@@ -1,5 +1,5 @@
-const { WeatherBot } = require('./chat/bot/weather-bot');
-const { config } = require('./common/config/constants');
+const { WeatherBot } = require('./bot/weather-bot');
+const { config } = require('../common/config/constants');
 
 function runBot() {
 

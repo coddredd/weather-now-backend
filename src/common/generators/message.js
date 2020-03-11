@@ -4,7 +4,6 @@ class Message {
         if (this.constructor === Message) {
             throw new TypeError('Abstract class "Message" cannot be instantiated directly.');
         }
-
         if (this.weatherIcon === undefined) {
             throw new TypeError('Classes extending the message abstract class');
         }

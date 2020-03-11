@@ -10,8 +10,10 @@ class Weather {
 
   get(date) {
     const { weatherUrl, wwoApiKey } = config;
-    const path = `${weatherUrl}&q=${encodeURIComponent(this.currentCity)}&key=${wwoApiKey}&date=${date}&lang=ru`;
-    return this._executeWeatherRequest(path);
+    if (!config.isMockedServer) {
+      const path = `${weatherUrl}&q=${encodeURIComponent(this.currentCity)}&key=${wwoApiKey}&date=${date}&lang=ru`;
+      return this._executeWeatherRequest(path);
+    } else return this._getMockedData();
   }
 
   _executeWeatherRequest(path) {
@@ -50,6 +52,22 @@ class Weather {
       })
     })
   }
+
+  _getMockedData() {
+    return Promise.resolve({
+      currentTemp: '20',
+      maxtempC: '22',
+      mintempC: '15',
+      location: 'Kyiv',
+      date: '18.04.2020',
+      weatherDesc: 'Солнечно',
+      feelsLike: '17',
+      windspeed: '64',
+      humidity: '43',
+      weatherHoulrly: null
+    })
+  }
+
 }
 
 module.exports = { Weather };
